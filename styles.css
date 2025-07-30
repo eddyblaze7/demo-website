@@ -1,0 +1,54 @@
+/* Reset & Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff69b4, #00ced1); /* pink to sea blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+/* Text Container */
+.container {
+  text-align: center;
+}
+
+/* Animated Glowing Typing Text */
+.animated-text {
+  font-size: 2.5rem;
+  color: white;
+  background: linear-gradient(90deg, #ff69b4, #00ced1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+  width: 0;
+  margin: 0 auto;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
